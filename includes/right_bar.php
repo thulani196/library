@@ -68,9 +68,9 @@
           </a>
 
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Pharmacy</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Radiology</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Nursing</a></li>
+            <li><a href="book-list.php"><i class="fa fa-circle-o"></i> Pharmacy</a></li>
+            <li><a href="book-list.php"><i class="fa fa-circle-o"></i> Radiology</a></li>
+            <li><a href="book-list.php"><i class="fa fa-circle-o"></i> Nursing</a></li>
             <!-- <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li> -->
           </ul>
 

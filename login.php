@@ -46,17 +46,17 @@
             } else {
                 //Ensuring password is 6 or more characters long
                 if(strlen($password) < 6){
-                    echo 'password must be at least 6 characters';
+                    echo '<div class="alert alert-danger text-center">password must be at least 6 characters</div>';
                 } else {
                     //Check if Email exists in database
                     $sql = $db->query("SELECT * FROM users WHERE student_number = '$studentNumber' ");
                     $user = mysqli_fetch_assoc($sql);
                     $count = mysqli_num_rows($sql);
                     if ($count < 1){
-                        echo 'Invalid Credentials';
+                        echo '<div class="alert alert-danger text-center">Invalid Credentials</div>';
                     } else {
                         if(!password_verify($password, $user['password'])){
-                            echo 'Invalid Credentials';
+                            echo '<div class="alert alert-danger text-center">Invalid Credentials</div>';
                         }else {                     
                             //FINALLY LOG THE USER IN
                             $userID = $user['id'];
@@ -71,7 +71,7 @@
     <form action="login.php" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="studentNumber" placeholder="Student number">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" name="password" placeholder="Password">

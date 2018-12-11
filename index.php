@@ -1,8 +1,6 @@
 <?php 
   require_once 'core/init.config.php';
 
-  $password = password_hash("123456", PASSWORD_DEFAULT);
-  echo $password; die();
   //LOGGED IN CHECK
   if(!is_logged_in()){
     login_error_check();
@@ -12,7 +10,6 @@
   include 'includes/navbar.php';
   include 'includes/right_bar.php';
 ?>
-
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

@@ -1,0 +1,7 @@
+card.medium{
+    .card-image{
+     max-height:100%; // Also this should be 100%.
+      height:300px; // corresponds to box height
+     img{height:300px;} // corresponds to image height
+     } 
+   }

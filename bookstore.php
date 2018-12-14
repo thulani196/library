@@ -26,14 +26,13 @@
     </div>
   </nav>
   <br><br><br><br>
-<div class="container">
-  <div class="row">
-  <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
+<div class="row">
+    <div class="col s12 m2">
+      <div class="card small">
         <div class="card-image">
-          <img src="https://5.imimg.com/data5/SR/TQ/GLADMIN-2954845/pharmacy-objective-type-book-500x500.png">
+          <img src="https://5.imimg.com/data5/SR/TQ/GLADMIN-2954845/pharmacy-objective-type-book-500x500.png"  width="500" height="200"/>
           <span class="card-title">Card Title</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
         </div>
         <div class="card-content">
           <p>I am a very simple card. I am good at containing small bits of information.
@@ -43,21 +42,7 @@
           <a href="#">This is a link</a>
         </div>
       </div>
-    </div>
   </div>
-  
-
-
-
-
-
-
-      <div class="col s6">6-columns (one-half)</div>
-      <div class="col s6">6-columns (one-half)</div>
-  <div>
-</div>
-
-
 
     <body>
       <!--JavaScript at end of body for optimized loading-->

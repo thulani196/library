@@ -1,4 +1,10 @@
 <?php 
+  require_once 'core/init.config.php';
+
+  //LOGGED IN CHECK
+  if(!is_logged_in()){
+    login_error_check();
+  }
   include 'includes/header.php';
   include 'includes/navbar.php';
   include 'includes/right_bar.php';
@@ -29,7 +35,9 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="dist/img/user4-128x128.jpg" alt="User profile picture">
 
-              <h3 class="profile-username text-center">Nina Mcintire</h3>
+              <h3 class="profile-username text-center">
+                <?= $_SESSION['FIRST_NAME'].' '.$_SESSION['LAST_NAME'];  ?>
+              </h3>
 
               <p class="text-muted text-center">Software Engineer</p>
 

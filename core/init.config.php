@@ -19,6 +19,7 @@
         $sql= $db->query("SELECT * FROM users WHERE id = '$userID' ");
         $user_info = mysqli_fetch_assoc($sql);
         
+        $_SESSION['USER_ID'] = $user_info['id'];
         $_SESSION['FIRST_NAME'] = $user_info['first_name'];
         $_SESSION['LAST_NAME'] = $user_info['last_name'];
         $_SESSION['ROLE'] = $user_info['role'];

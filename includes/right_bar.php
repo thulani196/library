@@ -8,7 +8,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>John Doe</p>
+          <p><?= $_SESSION['FIRST_NAME'].' '.$_SESSION['LAST_NAME'];  ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -75,6 +75,7 @@
           </ul>
 
         </li>
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
@@ -104,6 +105,27 @@
             </span>
           </a>
         </li>
+
+        <?php if($_SESSION['ROLE'] == 1): ?>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-gears"></i>
+                <span>Manage</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/library/lecturer/books.php"><i class="fa fa-circle-o"></i> Books</a></li>
+                <li><a href="index.php"><i class="fa fa-circle-o"></i> Notes</a></li>
+                <li><a href="index.php"><i class="fa fa-circle-o"></i> Videos</a></li>
+                <li><a href="index.php"><i class="fa fa-circle-o"></i> Assignments</a></li>
+                <li><a href="index.php"><i class="fa fa-circle-o"></i> Services</a></li>
+                <!-- <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li> -->
+              </ul>
+            </li>
+        <?php endif; ?>
+
         
       </ul>
     </section>

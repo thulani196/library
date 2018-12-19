@@ -8,6 +8,20 @@
         $userID = $_SESSION['USER_ID'];
     }
 
+    //Code snippet for DELETE a product
+    if(isset($_GET['delete']) && !empty($_GET['delete'])){
+      $toDeleteID = $_GET['delete'];
+      $sqlSelect = $db->query("SELECT * FROM books WHERE `id`='{$toDeleteID}'");
+      $row = mysqli_fetch_assoc($sqlSelect);
+      $bookLink = '../storage/books/'.$row['book'];
+      $thumbnailLink = '../storage/thumbnails/'.$row['thumbnail'];
+      unlink($bookLink);
+      unlink($thumbnailLink);
+      $sql = "DELETE FROM books WHERE id = '$toDeleteID' ";
+      $query_run = $db->query($sql);
+      // header("Location: books.php");
+    }
+
     if(isset($_POST['submit'])) {
 
         if(!empty($_FILES['book'])){
@@ -56,8 +70,6 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -77,9 +89,9 @@
 
     <!-- Main content -->
     <section class="content">
+
       <div class="row">
         <div class="col-xs-12">
-
           <div class="box">
             <div class="box-header">
               <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
@@ -107,12 +119,12 @@
                             <td> 4</td> -->
                             <td>
                               <a href="books.php?delete=<?= $row['id']; ?>" class="btn btn-xs btn-danger">delete</a>
-                              <a href="books.php?edit=<?= $row['id']; ?>" class="btn btn-xs btn-info">edit</a>
+                              <!-- <a href="books.php?edit=<?= $row['id']; ?>" class="btn btn-xs btn-info">edit</a> -->
                             </td>
                         </tr>
                     <?php endwhile ?>
                 <?php else: ?>
-                    <div class="alert alert-info text-center"> You have not uploaded any books yet. </div>
+                    <div class="alert alert-danger text-center"> You have not uploaded any books yet. </div>
                 <?php endif; ?>
                 
                
@@ -127,12 +139,14 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
+
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
-  <div class="modal fade" id="modal-default">
+
+       <div class="modal fade" id="modal-default">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">

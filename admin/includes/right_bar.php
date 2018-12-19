@@ -5,7 +5,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?= $_SESSION['FIRST_NAME'].' '.$_SESSION['LAST_NAME'];  ?></p>
@@ -27,7 +27,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="index.php">
+          <a href="../index.php">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -96,7 +96,7 @@
 
        
         <li>
-          <a href="mailbox.php">
+          <a href="../mailbox.php">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <!-- <small class="label pull-right bg-yellow">12</small>
@@ -132,7 +132,6 @@
 
             </li>
         <?php endif; ?>
-
         
       </ul>
     </section>

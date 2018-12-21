@@ -1,14 +1,14 @@
-<?php
+<?php 
     require_once '../core/init.config.php';
-    include 'includes/header.php';
+    include 'includes/header.php'; 
     include 'includes/navbar.php';
-    include 'includes/right_bar.php';
+    include 'includes/right_bar.php'; 
 
     if(isset($_SESSION['USER_ID'])) {
         $userID = $_SESSION['USER_ID'];
     }
 
-    $lecturers = $db->query("SELECT * FROM users WHERE `role` = 1");
+    $lecturers = $db->query("SELECT * FROM users WHERE `role` = 0");
     $courses = $db->query("SELECT * FROM courses");
 
     $count = @mysqli_num_rows($lecturers);
@@ -29,18 +29,19 @@
             //HASHING THE PASSWORD FOR SECURITY
             $password = password_hash($password, PASSWORD_DEFAULT);
             //INSERT QUERY REGISTERING NEW ADMIN TO THE DATABASE
-            $sql = "INSERT INTO users (`first_name`, `last_name`, `password`, `mobile_number`, `student_number`, `status`,`nrc_id`, `role`)
+            $sql = "INSERT INTO users (`first_name`, `last_name`, `password`, `mobile_number`, `student_number`, `status`,`nrc_id`, `role`) 
                                         VALUES('$firstName','$lastName','$password','$mobile','$userName', '$status', '$nrc', 1)";
-
+            
             $insert = $db->query($sql);
             // $_SESSION['add_admin'] = 'New user successfully added!';
             // header("Location: users.php");
 
       } else {
             echo '<div class="w3-red w3-center"> Passwords do not match!</div> ';
-      }
+      } 
 
     }
+
 ?>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -54,7 +55,7 @@
             <!-- <small>uploaded by you.</small> -->
         </h1>
         <ol class="breadcrumb">
-            <li>
+            <li> 
                 <button type="button" class="btn btn-default btn-info" data-toggle="modal" data-target="#modal-default">
                     Launch Default Modal
                 </button>
@@ -86,23 +87,27 @@
                 </thead>
                 <tbody>
 
-                  <?php if($count > 0): ?>
-                      <?php while($row = mysqli_fetch_assoc($lecturers)): ?>
-                          <tr>
-                              <td><?= $row['first_name']; ?></td>
-                              <td><?= $row['last_name']; ?></td>
-                              <td><?= $row['student_number']; ?></td>
-                              <td><?= $row['nrc_id']; ?></td>
-                              <td></td>
-                              <td>
-                                <a href="books.php?delete=<?= $row['id']; ?>" class="btn btn-xs btn-danger">delete</a>
-                                <!-- <a href="books.php?edit=<?= $row['id']; ?>" class="btn btn-xs btn-info">edit</a> -->
-                              </td>
-                          </tr>
-                      <?php endwhile ?>
-                  <?php else: ?>
-                      <div class="alert alert-danger text-center"> You have not created any Lecturer accounts yet. </div>
-                  <?php endif; ?>
+                <?php if($count > 0): ?>
+                    <?php while($row = mysqli_fetch_assoc($lecturers)): ?>
+                        <tr>
+                            <td><?= $row['first_name']; ?></td>
+                            <td><?= $row['last_name']; ?></td>
+                            <td><?= $row['student_number']; ?></td>
+                            <td><?= $row['nrc_id']; ?></td>
+                            <td></td>
+                            <!-- <td>Win 95+</td>
+                            <td> 4</td> -->
+                            <td>
+                              <a href="books.php?delete=<?= $row['id']; ?>" class="btn btn-xs btn-danger">delete</a>
+                              <!-- <a href="books.php?edit=<?= $row['id']; ?>" class="btn btn-xs btn-info">edit</a> -->
+                            </td>
+                        </tr>
+                    <?php endwhile ?>
+                <?php else: ?>
+                    <div class="alert alert-danger text-center"> You have not created any Lecturer accounts yet. </div>
+                <?php endif; ?>
+                
+               
 
                 </tfoot>
               </table>
@@ -173,7 +178,6 @@
                                 <?php while($row = mysqli_fetch_assoc($courses)): ?>
                                     <option value="<?= $row['id']; ?>"><?= $row['name'];?></option>
                                 <?php endwhile; ?>
-
                             </select>
                         </div>
 

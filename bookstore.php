@@ -28,7 +28,7 @@
   </div>
 
   <!-- HEADER  -->
-  
+
   <div id="container">
   <div class="row">
     <div class="col s12 m12 l2">
@@ -93,7 +93,7 @@
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
   </ul>
-        
+
 </div>
       </p>
     </div>
@@ -111,9 +111,9 @@
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
           </div>
         </div>
-        <p>Pharmacy Book 2018 ed </p> 
+        <p>Pharmacy Book 2018 ed </p>
       </div>
-      
+
       <!-- Second image  -->
       <div class="col s12 m4">
         <div class="card">
@@ -164,7 +164,7 @@
 
       </p>
   </div>
-  
+
   </div>
 
 
@@ -172,8 +172,8 @@
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      
-<script> 
+
+<script>
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, options);

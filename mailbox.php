@@ -1,4 +1,5 @@
-<?php 
+<?php
+  require_once 'core/init.config.php';
   include 'includes/header.php';
   include 'includes/navbar.php';
   include 'includes/right_bar.php';

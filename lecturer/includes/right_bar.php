@@ -58,7 +58,7 @@
           </a>
         </li>
         <li class="treeview">
-        
+
           <a href="#">
             <i class="fa fa-pie-chart"></i>
             <span>Book Store</span>
@@ -68,9 +68,9 @@
           </a>
 
           <ul class="treeview-menu">
-            <li><a href="book-list.php"><i class="fa fa-circle-o"></i> Pharmacy</a></li>
-            <li><a href="book-list.php"><i class="fa fa-circle-o"></i> Radiology</a></li>
-            <li><a href="book-list.php"><i class="fa fa-circle-o"></i> Nursing</a></li>
+            <li><a href="../Pharmacy.php"><i class="fa fa-circle-o"></i> Pharmacy</a></li>
+            <li><a href="../Radiology.php"><i class="fa fa-circle-o"></i> Radiology</a></li>
+            <li><a href="../Nursing.php"><i class="fa fa-circle-o"></i> Nursing</a></li>
             <!-- <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li> -->
           </ul>
 
@@ -94,7 +94,7 @@
           </ul>
         </li>
 
-       
+
         <li>
           <a href="../mailbox.php">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
@@ -117,7 +117,7 @@
               </a>
 
               <ul class="treeview-menu">
-                <?php if($_SESSION['ROLE'] == 1): ?> 
+                <?php if($_SESSION['ROLE'] == 1): ?>
                     <li><a href="/library/lecturer/books.php"><i class="fa fa-circle-o"></i> Books</a></li>
                     <li><a href="index.php"><i class="fa fa-circle-o"></i> Notes</a></li>
                     <li><a href="index.php"><i class="fa fa-circle-o"></i> Videos</a></li>
@@ -126,13 +126,13 @@
                 <?php elseif($_SESSION['ROLE'] == 0): ?>
                     <li><a href="../admin/lecturers.php"><i class="fa fa-circle-o"></i> Lecturers</a></li>
                 <?php endif; ?>
-                
+
                 <!-- <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li> -->
               </ul>
 
             </li>
         <?php endif; ?>
-        
+
       </ul>
     </section>
     <!-- /.sidebar -->

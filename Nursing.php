@@ -10,7 +10,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Book-list
+        Pharmacy Featured Books
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -23,95 +23,44 @@
     <section class="content">
 
       <div class="row">
-                    <!-- /.box-header -->
-                    <div class="box-body">
-              <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
-              <ul class="todo-list">
-                <li>
-                  <!-- drag handle -->
-                  <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <!-- checkbox -->
-                  <input type="checkbox" value="">
-                  <!-- todo text -->
-                  <span class="text">Design a nice theme</span>
-                  <!-- Emphasis label -->
-                  <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                  <!-- General tools such as edit or delete-->
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-                <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <input type="checkbox" value="">
-                  <span class="text">Make the theme responsive</span>
-                  <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-                <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
-                  <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-                <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
-                  <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-                <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <input type="checkbox" value="">
-                  <span class="text">Check your messages and notifications</span>
-                  <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-                <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
-                  <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-              </ul>
+        <!-- Image one -->
+        <div class="col-sm-3">
+        <div class="card" style="width:200px">
+            <img class="card-img-top" src="https://5.imimg.com/data5/SR/TQ/GLADMIN-2954845/pharmacy-objective-type-book-500x500.png" alt="Card image" height="200px">
+            <div class="card-body">
+              <h4 class="card-title">Pharmacy objective type </h4>
+              <p class="card-text">1st Edition.</p>
             </div>
+        </div>
+        </div>
+        <!-- image two -->
+        <div class="col-sm-3">
+          <div class="card" style="width:200px">
+              <img class="card-img-top" src="https://media.karousell.com/media/photos/products/2018/04/09/pharmacy_books_bundle_1523243227_600d4ffc.jpg" alt="Card image" height="200px">
+              <div class="card-body">
+                <h4 class="card-title">Pharmacy bjective type </h4>
+                <p class="card-text">1st Edition.</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="width:200px">
+              <img class="card-img-top" src="https://pharmaclub.in/wp-content/uploads/2018/05/rang-and-dales-pharmacology-books-free.jpg" alt="Card image" height="200px">
+              <div class="card-body">
+                <h4 class="card-title">Rand and Dale’s Pharmacology</h4>
+                <p class="card-text">1st Edition.</p>
+              </div>
+          </div>
+        </div>  <div class="col-sm-3">
+          <div class="card" style="width:200px">
+              <img class="card-img-top" src="https://5.imimg.com/data5/SR/TQ/GLADMIN-2954845/pharmacy-objective-type-book-500x500.png" alt="Card image" height="200px">
+              <div class="card-body">
+                <h4 class="card-title">Pharmacy objective type </h4>
+                <p class="card-text">1st Edition.</p>
+              </div>
+          </div>
+          </div>
+
       </div>
       <!-- /.row -->
 
@@ -123,7 +72,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io"><i>HypertechAnalytics</i></a>.</strong> All rights
     reserved.
   </footer>
 
